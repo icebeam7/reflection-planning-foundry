@@ -2,7 +2,7 @@
 
 This is a Jupyter Notebook tutorial using **Microsoft Foundry prompt agents (Agents v2) with the Responses API**. It demonstrates baseline, **plan → act**, and **act → critique → revise** using a small, objectively checkable fictional procurement dataset.
 
-You have to options to run this tutorial:
+You have two options to run this tutorial:
 
 ## Option A. Open in GitHub Codespaces
 
@@ -10,11 +10,17 @@ You have to options to run this tutorial:
 
 2. On GitHub select **Code → Codespaces → Create codespace on main**. Dependencies and Azure CLI install automatically.
 
-3. In the Codespaces terminal: `az login --use-device-code` (select the Azure tenant/subscription with your Foundry project).
+3. In the Codespaces terminal execute the following command: 
 
-4. `cp .env.example .env` then edit `.env` (do **not** commit it). Paste your Foundry **project endpoint** and deployed **model name**.
+    `az login --use-device-code` (follow the prompts and then select the Azure tenant/subscription with your Foundry project).
 
-5. Open `notebooks/reflection_planning_tutorial.ipynb`, choose the **Python (Reflection Lab)** kernel and run cells in order.
+4. Next, run the following command 
+
+    `cp .env.example .env` 
+
+5. Edit the `.env` newly created file (do **not** commit it). Paste your Foundry **project endpoint** and deployed **model name**.
+
+6. Open `notebooks/reflection_planning_tutorial.ipynb`, choose the **Python (Reflection Lab)** kernel. You will run cells in order during the lab.
 
 ## Option B. Local environment (if you don't want to use GitHub Codespaces)
 
@@ -32,6 +38,10 @@ az login
 cp .env.example .env
 jupyter lab
 ```
+
+4. Edit the `.env` newly created file (do **not** commit it). Paste your Foundry **project endpoint** and deployed **model name**.
+
+5. Open `notebooks/reflection_planning_tutorial.ipynb`, choose the **Python (Reflection Lab)** kernel. You will run cells in order during the lab.
 
 ## Required Azure resources
 
@@ -58,5 +68,7 @@ jupyter lab
 * Live responses and token usage vary. 
 
 * The lab is not a production security or compliance decision system.
+
+* Sample output is provided, so you can see how the agent works even without doing the lab. The most important thing is to understand the concept.
 
 **Source:** [Microsoft Learn – reflection and planning cycles, Agents v2](https://learn.microsoft.com/en-us/training/modules/aaai-design-agentic-loops-azure-ai-agent-service/4-implement-agent-reflection-planning-cycles).
